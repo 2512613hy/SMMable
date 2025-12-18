@@ -138,7 +138,8 @@ char* smmObj_getTypeName(int node_type)
     return (smmObj_nodeName[node_type]);
 }
 
-void printGrades(int player) {
+void printGrades(int player) 
+{
     int i;
     int size = smmdb_len(LISTNO_OFFSET_GRADE + player);
     printf("\n [Grade History for Player %i]\n", player);
@@ -155,7 +156,7 @@ void printGrades(int player) {
         int gradeIdx = ((smmObj_object_t*)ptr)->grade;
         printf(" - %s : %s\n", smmObj_getObjectName(ptr), smmObj_gradeName[gradeIdx]);
     }
-    printf(" ------------------------------\n");
+    printf(" ------------------------\n");
 }
 
 #if 0
