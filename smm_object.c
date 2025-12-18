@@ -144,13 +144,13 @@ void printGrades(int player)
     int size = smmdb_len(LISTNO_OFFSET_GRADE + player);
     printf("\n [Grade History for Player %i]\n", player);
     
-    
-    if (size == 0) {
-        printf(" No grades recorded yet.\n");
+    if (size == 0) 
+	{
+        printf("No grades recorded yet.\n");
         return;
     }
 
-    for (i = 0; i < size; i++) 
+    for (i=0;i<size;i++) 
 	{
         void* ptr = smmdb_getData(LISTNO_OFFSET_GRADE + player, i);
         
